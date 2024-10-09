@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-        <h1>Vite + React + Fireproof + Netlify (using extension)</h1>
+        <h1>Vite + React + Fireproof + Netlify (using extension with 0.19.11-dev-dryrun2)</h1>
         <div className="card">
             <p>
                 Created DocID: ${docID}
