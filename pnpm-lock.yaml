@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@fireproof/core':
-        specifier: 0.19.11-dev-dryrun2
-        version: 0.19.11-dev-dryrun2(react@18.3.1)(typescript@5.6.2)
+        specifier: 0.19.99
+        version: 0.19.99(react@18.3.1)(typescript@5.6.2)
       '@fireproof/netlify':
-        specifier: 0.19.11-dev-dryrun2
-        version: 0.19.11-dev-dryrun2(react@18.3.1)(typescript@5.6.2)
+        specifier: 0.19.99
+        version: 0.19.99(react@18.3.1)(typescript@5.6.2)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -327,13 +327,13 @@ packages:
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fireproof/core@0.19.11-dev-dryrun2':
-    resolution: {integrity: sha512-W2xsVJypRB0opWVVETInsJydaGuUOqSD0TGy9CfFYbdF8oAJ9YBQUwWr+pWH9X34FeM/pmdfHyifwJUFt2f+YQ==}
+  '@fireproof/core@0.19.99':
+    resolution: {integrity: sha512-ap0G8hJR7i6Xo4djPszDcSBkGOaz7y/aCecjyxw6+rf+IJumpKrO9NrBI9+ZgiehoFZdjoBwu0VrnIxf9sIa7w==}
     peerDependencies:
       react: '>=18.0.0'
 
-  '@fireproof/netlify@0.19.11-dev-dryrun2':
-    resolution: {integrity: sha512-52NVnFWfFRDehVMlm1DOvgGq/hIvZHgq9440XCODfy5ez29mWxD/LuJjtsskpzUPcqvVLgNXoNA/kccONfZ20w==}
+  '@fireproof/netlify@0.19.99':
+    resolution: {integrity: sha512-Pqx7y4aBJHhcXIou4JdqZfIJEL0NSJ8vPcVTsjdAhFa8IqtRwNE7y9qhXrmR8q6rVDJa3Pw7Go1IW9lhl/8Ohw==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1655,7 +1655,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@fireproof/core@0.19.11-dev-dryrun2(react@18.3.1)(typescript@5.6.2)':
+  '@fireproof/core@0.19.99(react@18.3.1)(typescript@5.6.2)':
     dependencies:
       '@adviser/cement': 0.2.31(typescript@5.6.2)
       '@ipld/car': 5.3.2
@@ -1675,9 +1675,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@fireproof/netlify@0.19.11-dev-dryrun2(react@18.3.1)(typescript@5.6.2)':
+  '@fireproof/netlify@0.19.99(react@18.3.1)(typescript@5.6.2)':
     dependencies:
-      '@fireproof/core': 0.19.11-dev-dryrun2(react@18.3.1)(typescript@5.6.2)
+      '@fireproof/core': 0.19.99(react@18.3.1)(typescript@5.6.2)
       '@netlify/blobs': 7.4.0
       cross-fetch: 4.0.0
     transitivePeerDependencies:
