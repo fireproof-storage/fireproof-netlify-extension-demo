@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# Fireproof + Netlify Extension Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The purpose of this application is to demonstrate that the Fireproof Netlify extension is installed and functioning correctly.
 
-Currently, two official plugins are available:
+## Deploying this to Netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Enable the Fireproof Netlify extension within the Netlify UI
+- Create a new site using an existing project, pointing to this repo
 
-## Expanding the ESLint configuration
+## Veryifying two-way sync works
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Verifying two-way sync requires to separate browser instances (not just separate tabs), referred to below as A and B:
 
-- Configure the top-level `parserOptions` property like this:
+- Browser A
+  - Open the newly deployed site
+  - Open the dev tools console
+  - Press the `Check All Docs Count` button, and expect to see `All Docs Length 0`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Repeat the same in Browser B
+  - Open the newly deployed site
+  - Open the dev tools console
+  - Press the `Check All Docs Count` button, and expect to see `All Docs Length 0`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Browser A
+  - Press the `Create Document` button
+  - Press the `Check All Docs Count` button, and expect to see `All Docs Length 1`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Back to Browser B
+  - Keep pressing the `Check All Docs Count` button, and eventually (often over 1m later) the `All Docs Length` will increase from 0 to 1
+  - Now, press the `Create Document` button
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Back to Browser A
+  - Keep pressing the `Check All Docs Count` button, and eventually (often over 1m later) the `All Docs Length` will increase from 1 to 2
+
+You have now verified that documents created in one browser are eventually synced and visible on the other browser.
